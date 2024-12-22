@@ -55,7 +55,7 @@ console.log("last line code of FS");
 // }, 1500);
 
 //Event Emitter from different module
-const ExampleEvent = require("./until_event/example_event");
+const ExampleEvent = require("./example_event");
 const exampleEvent = new ExampleEvent();
 exampleEvent.event();
 setTimeout(() => {
