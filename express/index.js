@@ -7,7 +7,20 @@ app.use(express.json());
 
 //static content
 const staticPath = path.join(__dirname, "../public");
-app.use(express.static(staticPath));
+app.use(
+  express.static(staticPath, {
+    index: "home.html",
+  })
+);
+
+//router
+const router = express.Router({
+  caseSensitive: true,
+});
+app.use(router);
+router.get("/about", (req, res) => {
+  res.send("This is about section");
+});
 
 //api
 app.get("/", (req, res) => {
