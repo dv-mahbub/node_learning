@@ -1,6 +1,15 @@
 const express = require("express");
+const path = require("path");
+
+//express declaration
 const app = express();
 app.use(express.json());
+
+//static content
+const staticPath = path.join(__dirname, "../public");
+app.use(express.static(staticPath));
+
+//api
 app.get("/", (req, res) => {
   res.send("Hello string");
 });
