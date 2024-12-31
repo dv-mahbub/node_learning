@@ -1,5 +1,5 @@
 const express = require("express");
-const aboutApi = require("./about-api");
+const aboutApi = require("../about-api");
 
 //first app name app
 const app = express();
