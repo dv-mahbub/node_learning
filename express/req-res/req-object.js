@@ -33,6 +33,12 @@ router.post("/user/:id", (req, res) => {
   console.log("cookie: " + JSON.stringify(req.cookies));
   console.log("route: " + JSON.stringify(req.route));
   console.log(req.accepts("json"));
+  console.log(req.get("content-type"));
+  console.log(req.is("json"));
+  console.log(req.get("host"));
+  console.log(req.get("accept"));
+  console.log(req.get("user-agent"));
+  console.log(req.xhr);
   console.log("..........................................");
   res.send(
     "successful, params: " + req.params.id + " query: " + req.query.filter
