@@ -7,5 +7,5 @@ app.use("/", publicRouter);
 app.use("/admin", adminRouter);
 
 app.listen(3000, () => {
-  console.log("Listenning to port 3000");
+  console.log("listening to port 3000");
 });

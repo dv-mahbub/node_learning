@@ -32,5 +32,5 @@ app.get("/contact", (req, res) => {
 });
 
 app.listen(4000, () => {
-  console.log("App is listenning at 4000");
+  console.log("App is listening at 4000");
 });
