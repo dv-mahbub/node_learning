@@ -81,6 +81,21 @@ app.post(
   }
 );
 
+//static content
+const staticPath = path.join(__dirname, "../../uploads");
+app.use(
+  express.static(staticPath, {
+    index: "home.html",
+  })
+);
+//static content
+const staticPath2 = path.join(__dirname, "../../public");
+app.use(
+  express.static(staticPath2, {
+    index: "home.html",
+  })
+);
+
 app.use((error, req, res, next) => {
   if (error) {
     if (error instanceof multer.MulterError) {
